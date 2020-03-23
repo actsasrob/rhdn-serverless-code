@@ -1,0 +1,26 @@
+<h2>What's New:</h2>
+<ul class="news-items">
+  <li *ngFor="let newsItem of newsItems"
+    [class.selected]="newsItem === selectedNewsItem"
+    (click)="onSelect(newsItem)">
+    <div>
+      <img alt="icon" src={{newsItem.icon_url}} />
+    </div>
+    <span class="badge">{{newsItem.id}}</span> {{newsItem.date}} {{newsItem.posted_timestamp}} {{newsItem.text}}
+  </li>
+</ul>
+
+<div *ngIf="selectedNewsItem">
+
+  <h2>NewsItem Details</h2>
+  <div><span>id: </span>{{selectedNewsItem.id}}</div>
+  <div><span>date: </span>{{selectedNewsItem.date}}</div>
+  <div><span>icon_url: </span>{{selectedNewsItem.icon_url}}</div>
+  <div><span>posted_timestamp: </span>{{selectedNewsItem.posted_timestamp}}</div>
+  <div>
+    <label>text:
+      <input [(ngModel)]="selectedNewsItem.text" placeholder="text"/>
+    </label>
+  </div>
+
+</div>
