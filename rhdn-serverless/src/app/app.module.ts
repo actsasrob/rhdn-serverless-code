@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewsItemsComponent } from './news-items/news-items.component';
 import { NewsItemDetailComponent } from './news-item-detail/news-item-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewsItemsComponent,
-    NewsItemDetailComponent
+    NewsItemDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
