@@ -5,11 +5,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewsItemsComponent } from './news-items/news-items.component';
+import { NewsItemDetailComponent } from './news-item-detail/news-item-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewsItemsComponent
+    NewsItemsComponent,
+    NewsItemDetailComponent
   ],
   imports: [
     BrowserModule,

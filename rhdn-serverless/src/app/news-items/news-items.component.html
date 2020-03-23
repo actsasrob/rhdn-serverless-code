@@ -10,17 +10,5 @@
   </li>
 </ul>
 
-<div *ngIf="selectedNewsItem">
+<app-news-item-detail [newsItem]="selectedNewsItem"></app-news-item-detail>
 
-  <h2>NewsItem Details</h2>
-  <div><span>id: </span>{{selectedNewsItem.id}}</div>
-  <div><span>date: </span>{{selectedNewsItem.date}}</div>
-  <div><span>icon_url: </span>{{selectedNewsItem.icon_url}}</div>
-  <div><span>posted_timestamp: </span>{{selectedNewsItem.posted_timestamp}}</div>
-  <div>
-    <label>text:
-      <input [(ngModel)]="selectedNewsItem.text" placeholder="text"/>
-    </label>
-  </div>
-
-</div>

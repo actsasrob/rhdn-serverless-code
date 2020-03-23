@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { NewsItem } from '../news-item';
 import { NEWS_ITEMS } from '../mock-news';
+import { NewsItemService } from '../news-item.service';
 
 @Component({
   selector: 'app-news-items',
