@@ -1,13 +1,24 @@
 <h2>All News:</h2>
 
-<ul class="news-items">
+<!--<ul class="news-items">
   <li *ngFor="let newsItem of newsItems">
     <a routerLink="/detail/{{newsItem.id}}">
     <div>
       <img alt="icon" src={{newsItem.icon_url}} />
+      <h3>{{newsItem.date}}</h3>
+      <p>
+      {{newsItem.text}}
     </div>
-    <span class="badge">{{newsItem.id}}</span> {{newsItem.date}} {{newsItem.posted_timestamp}} {{newsItem.text}}
     </a>
   </li>
 </ul>
+ -->
+
+<div class="news-items" *ngFor="let newsItem of newsItems">
+    <a routerLink="/detail/{{newsItem.id}}">
+      <img alt="icon" src={{newsItem.icon_url}} />
+      <h3>{{newsItem.date}}</h3>
+      <h4 innerHTML="{{newsItem.text}}"></h4>
+    </a>
+</div>
 
