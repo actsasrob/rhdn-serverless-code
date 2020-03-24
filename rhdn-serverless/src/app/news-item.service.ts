@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 
+import { Observable, of } from 'rxjs';
+
+import { MessageService } from './message.service';
 import { NewsItem } from './news-item';
 import { NEWS_ITEMS } from './mock-news';
 
@@ -8,14 +11,20 @@ import { NEWS_ITEMS } from './mock-news';
 })
 export class NewsItemService {
 
-  constructor() { }
 
-  ngOnInit() {
-    this.getNewsItems();
+  constructor(
+    private messageService: MessageService
+  ) {}
+
+  getNewsItems(): Observable<NewsItem[]> {
+    // TODO: send the message _after_ fetching the news items 
+    this.messageService.add('NewsItemService: fetched news items');
+    return of(NEWS_ITEMS);
   }
 
-  getNewsItems(): NewsItem[] {
-    return NEWS_ITEMS;
+  getNewsItem(id: number): Observable<NewsItem> {
+    // TODO: send the message _after_ fetching the news item 
+    this.messageService.add(`NewsItemService: fetched news item id=${id}`);
+    return of(NEWS_ITEMS.find(newsItem => newsItem.id === id));
   }
-
 }

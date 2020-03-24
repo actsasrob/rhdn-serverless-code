@@ -1,14 +1,13 @@
 <h2>What's New:</h2>
+
 <ul class="news-items">
-  <li *ngFor="let newsItem of newsItems"
-    [class.selected]="newsItem === selectedNewsItem"
-    (click)="onSelect(newsItem)">
+  <li *ngFor="let newsItem of newsItems">
+    <a routerLink="/detail/{{newsItem.id}}">
     <div>
       <img alt="icon" src={{newsItem.icon_url}} />
     </div>
     <span class="badge">{{newsItem.id}}</span> {{newsItem.date}} {{newsItem.posted_timestamp}} {{newsItem.text}}
+    </a>
   </li>
 </ul>
-
-<app-news-item-detail [newsItem]="selectedNewsItem"></app-news-item-detail>
 

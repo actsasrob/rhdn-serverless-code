@@ -1,4 +1,7 @@
-<h1>{{title}} News</h1>
-<app-news-items></app-news-items>
-
+<h1>{{title}}</h1>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/news">News</a>
+</nav>
+<router-outlet></router-outlet>
 <app-messages></app-messages>
