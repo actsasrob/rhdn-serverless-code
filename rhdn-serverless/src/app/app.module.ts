@@ -8,6 +8,7 @@ import { NewsItemsComponent } from './news-items/news-items.component';
 import { NewsItemDetailComponent } from './news-item-detail/news-item-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PhotosComponent } from './photos/photos.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     NewsItemsComponent,
     NewsItemDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    PhotosComponent
   ],
   imports: [
     BrowserModule,
