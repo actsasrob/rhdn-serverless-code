@@ -8,6 +8,10 @@ Serverless version of robhughes.net (RHDN) website
 + env_setup.sh -- Set up nvm environment for development
 + ng-server.sh -- Start development webserver. Opens browser table to http:/localhost:4201
 
+## Update Website Hosted in S3:
++ Run deployment_setup.sh
++ aws s3 sync --delete rhdn-serverless/dist/rhdn-serverless/ s3://rhdn-serverless/
+
 ## To Do:
 1. Replace mock news with Dynamo DB backend.
 1. Add admin users and authentication
