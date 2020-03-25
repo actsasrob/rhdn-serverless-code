@@ -9,7 +9,7 @@ Serverless version of robhughes.net (RHDN) website
 + ng-server.sh -- Start development webserver. Opens browser table to http:/localhost:4201
 
 ## To Do:
-1. Replace mock news with Dynamodb DB backend.
+1. Replace mock news with Dynamo DB backend.
 1. Add admin users and authentication
 1. Only allow users to navigate to detail view when logged in as admin
 1. Stylesheet updates for detail view
