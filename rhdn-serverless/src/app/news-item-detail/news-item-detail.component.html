@@ -2,9 +2,17 @@
 
   <h2>News Item Details</h2>
   <div><span>id: </span>{{newsItem.id}}</div>
-  <div><span>date: </span>{{newsItem.date}}</div>
-  <div><span>icon_url: </span>{{newsItem.icon_url}}</div>
   <div><span>posted_timestamp: </span>{{newsItem.posted_timestamp}}</div>
+  <div>
+    <label>date:
+      <input [(ngModel)]="newsItem.date" placeholder="YYYY-MM-DD"/>
+    </label>
+  </div>
+  <div>
+    <label>icon_url:
+      <input [(ngModel)]="newsItem.icon_url" placeholder="icon url"/>
+    </label>
+  </div>
   <div>
     <label>text:
       <input [(ngModel)]="newsItem.text" placeholder="text"/>

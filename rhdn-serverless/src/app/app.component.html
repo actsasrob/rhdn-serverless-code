@@ -1,8 +1,23 @@
-<h1>{{title}}</h1>
+<div id="header">
+  <h1>{{title}}<sup>3.14</sup></h1>
+  <br>
+  <h2>...a work in progress</h2>
+</div>
+
+<div id="splash"></div>
+
+<br>
+
+<div id="menu">
 <nav>
   <a routerLink="/dashboard">Dashboard</a>
   <a routerLink="/news">News</a>
   <a routerLink="/photos">Photos</a>
 </nav>
+</div> <!-- id="menu" -->
+
 <router-outlet></router-outlet>
+
+<!-- uncomment to get debug messages
 <app-messages></app-messages>
+-->
