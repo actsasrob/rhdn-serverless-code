@@ -1,13 +1,4 @@
-<h2>Recent News</h2>
-<!--<div class="grid grid-pad">
-  <a *ngFor="let newsItem of newsItems" class="col-1-4"
-      routerLink="/detail/{{newsItem.id}}">
-    <div class="module news-item">
-      <h4>{{newsItem.date}}</h4>
-    </div>
-  </a>
-</div>
- -->
+<h2>Recent News:</h2>
 
 <div class="news-items" *ngFor="let newsItem of newsItems">
     <a routerLink="/detail/{{newsItem.id}}">

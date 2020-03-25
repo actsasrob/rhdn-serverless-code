@@ -18,6 +18,6 @@ export class DashboardComponent implements OnInit {
 
   getNewsItems(): void {
     this.newsItemService.getNewsItems()
-      .subscribe(newsItems => this.newsItems = newsItems.slice(1, 5));
+      .subscribe(newsItems => this.newsItems = newsItems.slice(0, 4));
   }
 }

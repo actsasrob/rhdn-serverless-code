@@ -19,7 +19,7 @@ export class NewsItemService {
   getNewsItems(): Observable<NewsItem[]> {
     // TODO: send the message _after_ fetching the news items 
     this.messageService.add('NewsItemService: fetched news items');
-    return of(NEWS_ITEMS);
+    return of(NEWS_ITEMS.sort((a, b) => {return b.id - a.id}));
   }
 
   getNewsItem(id: number): Observable<NewsItem> {

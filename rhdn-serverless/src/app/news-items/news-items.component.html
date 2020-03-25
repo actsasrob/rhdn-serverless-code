@@ -1,19 +1,5 @@
 <h2>All News:</h2>
 
-<!--<ul class="news-items">
-  <li *ngFor="let newsItem of newsItems">
-    <a routerLink="/detail/{{newsItem.id}}">
-    <div>
-      <img alt="icon" src={{newsItem.icon_url}} />
-      <h3>{{newsItem.date}}</h3>
-      <p>
-      {{newsItem.text}}
-    </div>
-    </a>
-  </li>
-</ul>
- -->
-
 <div class="news-items" *ngFor="let newsItem of newsItems">
     <a routerLink="/detail/{{newsItem.id}}">
       <img alt="icon" src={{newsItem.icon_url}} />
@@ -22,3 +8,4 @@
     </a>
 </div>
 
+<button (click)="goBack()">go back</button>

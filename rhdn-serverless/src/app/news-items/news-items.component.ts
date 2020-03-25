@@ -32,4 +32,7 @@ export class NewsItemsComponent implements OnInit {
     .subscribe(newsItems => this.newsItems = newsItems);
   }
 
+  goBack(): void {
+    this.location.back();
+  }
 }
