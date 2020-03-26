@@ -10,7 +10,7 @@ Serverless version of robhughes.net (RHDN) website
 
 ## Update Website Hosted in S3:
 + Run deployment_setup.sh
-+ aws s3 sync --delete rhdn-serverless/dist/rhdn-serverless/ s3://rhdn-serverless/
++ aws s3 sync --delete rhdn-serverless/dist/rhdn-serverless/ s3://www.robhughes.net/
 
 ## To Do:
 1. Replace mock news with Dynamo DB backend.
